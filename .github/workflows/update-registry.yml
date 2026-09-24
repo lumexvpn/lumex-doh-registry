@@ -2,6 +2,13 @@ name: Update verified DoH registry
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/update-registry.yml"
+      - "update_registry.pyc"
+      - "encrypt_registry.pyc"
+      - "sources.json"
   schedule:
     - cron: "17 */6 * * *"
 
